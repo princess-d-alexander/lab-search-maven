@@ -2,11 +2,8 @@ package edu.grinnell.csc207;
 
 import java.util.Arrays;
 
-import java.util.function.Supplier;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import org.junit.jupiter.api.Test;
 
 import edu.grinnell.csc207.util.SearchUtils;
@@ -14,8 +11,8 @@ import edu.grinnell.csc207.util.SearchUtils;
 /**
  * Tests of our search methods.
  *
- * @author Your Name Here
- * @author Your Name Here
+ * @author Princess Alexander
+ * @author Sal Karki
  * @author Samuel A. Rebelsky
  */
 public class TestSearch {
@@ -103,5 +100,34 @@ public class TestSearch {
     assertBinarySearchFails(new int[] { 7, 11 }, 10);
     assertBinarySearchFails(new int[] { 7, 11 }, 20);
   } // testBinarySearchTwo()
+
+  /**
+   * Searching in a one-element array with negative numbers.
+   */
+  @Test
+  void testBinarySearchNegativeOne() throws Exception {
+    assertBinarySearchFinds(0, new int[] { -6 }, -6);
+    assertBinarySearchFails(new int[] { -6 }, 0);
+    assertBinarySearchFails(new int[] { -6 }, 10);
+  } // testBinarySearchNegativeOne()
+
+
+  /**
+   * Searching an five-element array
+   */
+  @Test
+  void testBinarySearchFive() throws Exception {
+    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 5);
+    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 4);
+    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 3);
+    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 2);
+    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 1);
+    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 0);
+    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 10);
+    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 20);
+    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 30);
+    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 40);
+    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 50);
+  } // testBinarySearchFive()
 
 } // class TestSearch
