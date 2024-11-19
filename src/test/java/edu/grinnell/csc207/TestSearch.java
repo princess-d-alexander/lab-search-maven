@@ -117,17 +117,17 @@ public class TestSearch {
    */
   @Test
   void testBinarySearchFive() throws Exception {
-    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 5);
-    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 4);
-    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 3);
-    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 2);
-    assertBinarySearchFinds(0, new int[] { 5, 4, 3, 2, 1}, 1);
-    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 0);
-    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 10);
-    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 20);
-    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 30);
-    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 40);
-    assertBinarySearchFails(new int[] { 5, 4, 3, 2, 1}, 50);
+    assertBinarySearchFinds(4, new int[] { 1 , 2, 3, 4, 5}, 5);
+    assertBinarySearchFinds(3, new int[] { 1 , 2, 3, 4, 5}, 4);
+    assertBinarySearchFinds(2, new int[] { 1 , 2, 3, 4, 5}, 3);
+    assertBinarySearchFinds(1, new int[] { 1 , 2, 3, 4, 5}, 2);
+    assertBinarySearchFinds(0, new int[] { 1 , 2, 3, 4, 5}, 1);
+    assertBinarySearchFails(new int[] { 1 , 2, 3, 4, 5}, 0);
+    assertBinarySearchFails(new int[] { 1 , 2, 3, 4, 5}, 10);
+    assertBinarySearchFails(new int[] { 1 , 2, 3, 4, 5}, 20);
+    assertBinarySearchFails(new int[] { 1 , 2, 3, 4, 5}, 30);
+    assertBinarySearchFails(new int[] { 1 , 2, 3, 4, 5}, 40);
+    assertBinarySearchFails(new int[] { 1 , 2, 3, 4, 5}, 50);
   } // testBinarySearchFive()
 
 } // class TestSearch

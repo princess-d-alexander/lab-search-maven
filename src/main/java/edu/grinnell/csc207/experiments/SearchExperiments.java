@@ -11,8 +11,8 @@ import edu.grinnell.csc207.util.SearchUtils;
 /**
  * Assorted experiments for searching structures.
  *
- * @author Your Name Here
- * @author Your Name Here
+ * @author Princess Alexander
+ * @author Sal Karki
  * @author Samuel A. Rebelsky (starter code)
  */
 public class SearchExperiments {
@@ -47,8 +47,6 @@ public class SearchExperiments {
     } catch (Exception e) {
       pen.println("There are no strings of exactly six letters.");
     } // try/catch
-
-
     
     try {
       String ex1c = SearchUtils.search(strings, (str) -> str.contains("u"));

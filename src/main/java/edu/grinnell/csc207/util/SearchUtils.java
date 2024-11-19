@@ -38,13 +38,13 @@ public class SearchUtils {
     while(leftb <= rightb){
       int mid = (leftb + (rightb - leftb) / 2);
       if (vals[mid] == i){
-        return mid;
+        return mid; // Target Found
       }
       else if (vals[mid] < i){
-        leftb = mid +1;
+        leftb = mid +1; // search right half
       }
       else {
-      rightb = mid - 1;
+      rightb = mid - 1; // search left half
       }
     }
     throw new Exception("No matching element found");
